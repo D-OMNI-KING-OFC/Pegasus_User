@@ -174,7 +174,7 @@ class WebItemWidget extends StatelessWidget {
                                 style: robotoRegular.copyWith(
                                   fontWeight: FontWeight.w300,
                                   fontSize: Dimensions.fontSizeOverSmall,
-                                  color: isStore ? Theme.of(context).disabledColor : Theme.of(context).primaryColor,
+                                  color: isStore ? Theme.of(context).disabledColor : Theme.of(context).textTheme.bodyMedium?.color,
                                 ),
                                 maxLines: 1, overflow: TextOverflow.ellipsis,
                               ) : const SizedBox(),
@@ -213,11 +213,11 @@ class WebItemWidget extends StatelessWidget {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
-                                      Icon(Icons.star, color: Theme.of(context).primaryColor, size: 12),
+                                      Icon(Icons.star, color: Theme.of(context).textTheme.bodyMedium?.color, size: 12),
                                       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                       Text(
                                         item!.ratingCount.toString(),
-                                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeOverSmall, color: Theme.of(context).primaryColor),
+                                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeOverSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                                       ),
                                     ],
                                   ),
