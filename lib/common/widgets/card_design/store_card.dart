@@ -107,12 +107,12 @@ class StoreCard extends StatelessWidget {
                             size: 12,
                           ) : const SizedBox() : Row(children: [
 
-                            Icon(Icons.storefront, size: 15, color: Theme.of(context).primaryColor),
+                            Icon(Icons.storefront, size: 15, color: Theme.of(context).textTheme.bodyLarge!.color),
                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                             Expanded(
                               child: Text(store.address ?? '',
-                                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyLarge!.color),
                                 maxLines: 1, overflow: TextOverflow.ellipsis,
                               ),
                             ),
@@ -122,17 +122,17 @@ class StoreCard extends StatelessWidget {
 
                           !isPharmacy ? Row(children: [
 
-                            Icon(Icons.storefront, size: 15, color: Theme.of(context).primaryColor),
+                            Icon(Icons.storefront, size: 15, color: Theme.of(context).textTheme.bodyLarge!.color),
                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                             Flexible(
                               child: Text(store.address ?? '',
-                                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyLarge!.color),
                                 maxLines: 1, overflow: TextOverflow.ellipsis,
                               ),
                             ),
 
-                          ]) : Text('${store.itemCount}' ' ' 'items'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor)),
+                          ]) : Text('${store.itemCount}' ' ' 'items'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge!.color)),
 
                         ]),
                       ),
@@ -187,10 +187,10 @@ class StoreCard extends StatelessWidget {
                           Image.asset(Images.distanceLine, height: 15, width: 15),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                          Text('${distance > 100 ? '100+' : distance.toStringAsFixed(2)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                          Text('${distance > 100 ? '100+' : distance.toStringAsFixed(2)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeSmall)),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                          Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                          Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeSmall)),
                         ]),
                       ),
                       const Spacer(),

@@ -200,7 +200,7 @@ class StoreCardWithDistance extends StatelessWidget {
                                ]),
                              ),
 
-                             Text('${store.itemCount} ${'items'.tr}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor)),
+                             Text('${store.itemCount} ${'items'.tr}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyLarge!.color)),
 
                            ]),
 
@@ -224,11 +224,11 @@ class StoreCardWithDistance extends StatelessWidget {
 
                                 Text(
                                   '${distance > 100 ? '100+' : distance.toStringAsFixed(2)} ${'km'.tr}',
-                                  style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeExtraSmall),
+                                  style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeExtraSmall),
                                 ),
                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeExtraSmall)),
+                                Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeExtraSmall)),
                               ]),
                             ),
 
