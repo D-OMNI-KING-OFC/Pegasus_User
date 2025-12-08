@@ -37,6 +37,9 @@ class StoreCard extends StatelessWidget {
     bool isRightSide = Get.find<SplashController>().configModel!.currencySymbolDirection == 'right';
     String currencySymbol = Get.find<SplashController>().configModel!.currencySymbol!;
     bool isAvailable = store.open == 1 && store.active!;
+    
+    // DEBUG: Print store status
+    print('🔍 DEBUG [${store.name}] - open: ${store.open}, active: ${store.active}, isAvailable: $isAvailable, storeOpeningTime: ${store.storeOpeningTime}');
 
     return Stack(children: [
 
