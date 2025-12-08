@@ -48,7 +48,7 @@ class _StoreItemSearchScreenState extends State<StoreItemSearchScreen> {
 
                   IconButton(
                     onPressed: () => Get.back(),
-                    icon: Icon(Icons.arrow_back_ios, color: Theme.of(context).primaryColor),
+                    icon: Icon(Icons.arrow_back_ios, color: Theme.of(context).textTheme.bodyMedium?.color),
                   ),
 
                   Expanded(child: TextField(

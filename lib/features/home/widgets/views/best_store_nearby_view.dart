@@ -57,7 +57,7 @@ class BestStoreNearbyView extends StatelessWidget {
                     height: 2, width: context.width * 0.75,
                     color: Theme.of(context).primaryColor.withValues(alpha: 0.2),
                   ),
-                  Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).primaryColor.withValues(alpha: 0.5))),
+                  Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.5))),
 
 
                   InkWell(
@@ -193,7 +193,7 @@ class BestStoreNearbyView extends StatelessWidget {
 
                                             storeList[index].ratingCount! > 0 ? Row(mainAxisAlignment: MainAxisAlignment.start, children: [
 
-                                              Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                              Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                               const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                               Text(storeList[index].avgRating!.toStringAsFixed(1), style: robotoRegular),
@@ -316,7 +316,7 @@ class BestStoreNearbyShimmer extends StatelessWidget {
                 height: 2, width: context.width * 0.75,
                 color: Theme.of(context).primaryColor.withValues(alpha: 0.2),
               ),
-              Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).primaryColor.withValues(alpha: 0.5))),
+              Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.5))),
 
 
               Padding(
@@ -396,7 +396,7 @@ class BestStoreNearbyShimmer extends StatelessWidget {
 
                               !isPharmacy ? Row(children: [
 
-                                Icon(Icons.storefront, size: 15, color: Theme.of(context).primaryColor),
+                                Icon(Icons.storefront, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                 Expanded(
@@ -643,7 +643,7 @@ class BestStoreNearbyShimmer extends StatelessWidget {
 
                                   Row(children: [
 
-                                    Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                    Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                     const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                     Container(

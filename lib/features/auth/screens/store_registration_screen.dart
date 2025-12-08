@@ -490,7 +490,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                           '${storeRegController.storeMinTime} : ${storeRegController.storeMaxTime} ${storeRegController.storeTimeUnit}',
                                           style: robotoMedium,
                                         )),
-                                        Icon(Icons.access_time_filled, color: Theme.of(context).primaryColor,)
+                                        Icon(Icons.access_time_filled, color: Theme.of(context).textTheme.bodyMedium?.color,)
                                       ]),
                                     ),
 
@@ -562,7 +562,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                           storeRegController.tinExpireDate ?? 'select_date'.tr,
                                           style: robotoMedium,
                                         )),
-                                        Icon(Icons.calendar_month, color: Theme.of(context).primaryColor),
+                                        Icon(Icons.calendar_month, color: Theme.of(context).textTheme.bodyMedium?.color),
                                       ]),
                                     ),
 
@@ -1122,7 +1122,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                             '${storeRegController.storeMinTime} : ${storeRegController.storeMaxTime} ${storeRegController.storeTimeUnit}',
                             style: robotoMedium,
                           )),
-                          Icon(Icons.access_time_filled, color: Theme.of(context).primaryColor,)
+                          Icon(Icons.access_time_filled, color: Theme.of(context).textTheme.bodyMedium?.color,)
                         ]),
                       ),
 
@@ -1347,7 +1347,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                             storeRegController.tinExpireDate ?? 'select_date'.tr,
                             style: robotoMedium,
                           )),
-                          Icon(Icons.calendar_month, color: Theme.of(context).primaryColor),
+                          Icon(Icons.calendar_month, color: Theme.of(context).textTheme.bodyMedium?.color),
                         ]),
                       ),
 

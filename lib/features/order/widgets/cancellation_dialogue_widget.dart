@@ -67,7 +67,7 @@ class _CancellationDialogueWidgetState extends State<CancellationDialogueWidget>
                           },
                           title: Row(
                             children: [
-                              Icon(orderController.orderCancelReasons![index].reason == orderController.cancelReason ? Icons.radio_button_checked : Icons.radio_button_off, color: Theme.of(context).primaryColor, size: 18),
+                              Icon(orderController.orderCancelReasons![index].reason == orderController.cancelReason ? Icons.radio_button_checked : Icons.radio_button_off, color: Theme.of(context).textTheme.bodyMedium?.color, size: 18),
                               const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                               Flexible(child: Text(orderController.orderCancelReasons![index].reason!, style: robotoRegular, maxLines: 3, overflow: TextOverflow.ellipsis)),

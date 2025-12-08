@@ -195,7 +195,7 @@ class OrderTrackingScreenState extends State<OrderTrackingScreen> with WidgetsBi
                   child: Container(
                     padding: const EdgeInsets.all( Dimensions.paddingSizeSmall),
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.white),
-                    child: Icon(Icons.my_location_outlined, color: Theme.of(context).primaryColor, size: 25),
+                    child: Icon(Icons.my_location_outlined, color: Theme.of(context).textTheme.bodyMedium?.color, size: 25),
                   ),
                 ),
               ),

@@ -87,7 +87,7 @@ class OfflinePaymentButton extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () => tooltipController.showTooltip(),
-                child: isSelected ? Icon(Icons.info_rounded, color: Theme.of(context).primaryColor, size: 18) : const SizedBox(),
+                child: isSelected ? Icon(Icons.info_rounded, color: Theme.of(context).textTheme.bodyMedium?.color, size: 18) : const SizedBox(),
               ),
             ),
 

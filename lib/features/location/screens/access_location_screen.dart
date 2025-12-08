@@ -219,7 +219,7 @@ class BottomButton extends StatelessWidget {
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Padding(
             padding: const EdgeInsets.only(right: Dimensions.paddingSizeExtraSmall),
-            child: Icon(Icons.map, color: Theme.of(context).primaryColor),
+            child: Icon(Icons.map, color: Theme.of(context).textTheme.bodyMedium?.color),
           ),
           Text('set_from_map'.tr, textAlign: TextAlign.center, style: robotoBold.copyWith(
             color: Theme.of(context).primaryColor,

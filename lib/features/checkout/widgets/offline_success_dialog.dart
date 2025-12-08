@@ -25,7 +25,7 @@ class OfflineSuccessDialog extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeLarge),
           child: SingleChildScrollView(
             child: Column(children: [
-              Icon(Icons.check_circle, size: 60, color: Theme.of(context).primaryColor),
+              Icon(Icons.check_circle, size: 60, color: Theme.of(context).textTheme.bodyMedium?.color),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
               Text(

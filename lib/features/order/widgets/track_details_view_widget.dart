@@ -83,7 +83,7 @@ class TrackDetailsViewWidget extends StatelessWidget {
             }
           },
           child: Column(children: [
-            Icon(Icons.directions, size: 25, color: Theme.of(context).primaryColor),
+            Icon(Icons.directions, size: 25, color: Theme.of(context).textTheme.bodyMedium?.color),
             Text(
               'direction'.tr,
               style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor),

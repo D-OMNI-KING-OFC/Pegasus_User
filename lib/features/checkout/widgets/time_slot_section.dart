@@ -90,7 +90,7 @@ class TimeSlotSection extends StatelessWidget {
                 ),
 
                 const Icon(Icons.arrow_drop_down, size: 28),
-                Icon(Icons.access_time_filled_outlined, color: Theme.of(context).primaryColor),
+                Icon(Icons.access_time_filled_outlined, color: Theme.of(context).textTheme.bodyMedium?.color),
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
               ]),
             ),

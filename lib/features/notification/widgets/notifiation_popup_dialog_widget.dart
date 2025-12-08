@@ -41,7 +41,7 @@ class _NewRequestDialogState extends State<NotificationPopUpDialogWidget> {
         padding: const EdgeInsets.all(Dimensions.paddingSizeExtraLarge),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
 
-          Icon(Icons.notifications_active, size: 60, color: Theme.of(context).primaryColor),
+          Icon(Icons.notifications_active, size: 60, color: Theme.of(context).textTheme.bodyMedium?.color),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),

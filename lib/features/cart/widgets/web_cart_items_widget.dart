@@ -55,7 +55,7 @@ class WebCardItemsWidget extends StatelessWidget {
                           arguments: StoreScreen(store: Store(id: cartController.cartList[0].item!.storeId), fromModule: false),
                         );
                       },
-                      icon: Icon(Icons.add_circle_outline_sharp, color: Theme.of(context).primaryColor),
+                      icon: Icon(Icons.add_circle_outline_sharp, color: Theme.of(context).textTheme.bodyMedium?.color),
                       label: Text('add_more_items'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color)),
                     ),
                   ),

@@ -97,7 +97,7 @@ class ItemCampaignView extends StatelessWidget {
                                       style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall), textDirection: TextDirection.ltr,
                                     ),
                                   ),
-                                  Icon(Icons.star, color: Theme.of(context).primaryColor, size: 12),
+                                  Icon(Icons.star, color: Theme.of(context).textTheme.bodyMedium?.color, size: 12),
                                   Text(
                                     campaignController.itemCampaignList![index].avgRating!.toStringAsFixed(1),
                                     style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),

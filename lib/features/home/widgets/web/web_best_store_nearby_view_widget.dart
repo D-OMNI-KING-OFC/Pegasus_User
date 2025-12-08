@@ -101,7 +101,7 @@ class _WebBestStoreNearbyViewWidgetState extends State<WebBestStoreNearbyViewWid
                     height: 2, width: ResponsiveHelper.isDesktop(context) ? Dimensions.webMaxWidth * 0.88 : Get.width * 0.75,
                     color: Theme.of(context).primaryColor.withValues(alpha: 0.2),
                   ),
-                  Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).primaryColor.withValues(alpha: 0.5))),
+                  Container(transform: Matrix4.translationValues(-5, 0, 0),child: Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.5))),
 
                   InkWell(
                     onTap: () => Get.toNamed(RouteHelper.getAllStoreRoute('popular', isNearbyStore: true)),
@@ -230,7 +230,7 @@ class _WebBestStoreNearbyViewWidgetState extends State<WebBestStoreNearbyViewWid
 
                                                     Row(children: [
 
-                                                      Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                                      Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                                       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                                       Text(storeList[index].avgRating!.toStringAsFixed(1), style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),

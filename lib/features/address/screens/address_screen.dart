@@ -113,7 +113,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Icon(Icons.add_circle_outline, color: Theme.of(context).primaryColor, size: 30),
+                                            Icon(Icons.add_circle_outline, color: Theme.of(context).textTheme.bodyMedium?.color, size: 30),
                                             const SizedBox(height: Dimensions.paddingSizeSmall),
                                             Text('add_new_address'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium!.color, fontSize: Dimensions.fontSizeSmall)),
                                           ],

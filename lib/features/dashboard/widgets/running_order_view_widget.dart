@@ -140,8 +140,8 @@ class RunningOrderViewWidget extends StatelessWidget {
                                 Text('+${reversOrder.length - 1}', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor)),
                                 Text('more'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor)),
                               ]),
-                            ) : Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).primaryColor)
-                            : Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).primaryColor),
+                            ) : Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).textTheme.bodyMedium?.color)
+                            : Icon(Icons.arrow_forward, size: 18, color: Theme.of(context).textTheme.bodyMedium?.color),
                       ),
 
                     ]),

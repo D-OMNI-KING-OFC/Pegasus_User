@@ -175,7 +175,7 @@ class _WebNewOnMartViewWidgetState extends State<WebNewOnMartViewWidget> {
 
                                               Row(children: [
 
-                                                Icon(Icons.storefront, size: 15, color: Theme.of(context).primaryColor),
+                                                Icon(Icons.storefront, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                                 Expanded(

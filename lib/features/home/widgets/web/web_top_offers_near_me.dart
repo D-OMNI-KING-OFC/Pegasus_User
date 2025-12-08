@@ -220,7 +220,7 @@ class _WebTopOffersNearMeState extends State<WebTopOffersNearMe> {
                                   size: 12,
                                 ) : Row(mainAxisAlignment: MainAxisAlignment.start, children: [
 
-                                  Icon(Icons.star, color: Theme.of(context).primaryColor, size: 14),
+                                  Icon(Icons.star, color: Theme.of(context).textTheme.bodyMedium?.color, size: 14),
                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                   Text('${store.avgRating}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
@@ -240,7 +240,7 @@ class _WebTopOffersNearMeState extends State<WebTopOffersNearMe> {
 
                                 Row(children: [
 
-                                  Icon(Icons.storefront, size: 10, color: Theme.of(context).primaryColor),
+                                  Icon(Icons.storefront, size: 10, color: Theme.of(context).textTheme.bodyMedium?.color),
                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                   Expanded(

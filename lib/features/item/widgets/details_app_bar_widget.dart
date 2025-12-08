@@ -58,7 +58,7 @@ class DetailsAppBarWidgetState extends State<DetailsAppBarWidget> with SingleTic
           return Container(
             padding: EdgeInsets.only(left: offsetAnimation.value + 15.0, right: 15.0 - offsetAnimation.value),
             child: Stack(children: [
-              IconButton(icon: Icon(Icons.shopping_cart, color: Theme.of(context).primaryColor), onPressed: () {
+              IconButton(icon: Icon(Icons.shopping_cart, color: Theme.of(context).textTheme.bodyMedium?.color), onPressed: () {
                 Navigator.pushNamed(context, RouteHelper.getCartRoute());
               }),
               Positioned(

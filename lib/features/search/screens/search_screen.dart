@@ -281,7 +281,7 @@ class SearchScreenState extends State<SearchScreen> with TickerProviderStateMixi
                                       onTap: () => searchController.removeHistory(index),
                                       child: Padding(
                                         padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeExtraSmall),
-                                        child: Icon(Icons.close, color: Theme.of(context).primaryColor, size: 16),
+                                        child: Icon(Icons.close, color: Theme.of(context).textTheme.bodyMedium?.color, size: 16),
                                       ),
                                     )
                                   ],

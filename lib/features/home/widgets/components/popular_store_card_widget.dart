@@ -88,7 +88,7 @@ class PopularStoreCard extends StatelessWidget {
                                       children: [
                                         Row(
                                           children: [
-                                            Icon(Icons.star, color: Theme.of(context).primaryColor, size: 15),
+                                            Icon(Icons.star, color: Theme.of(context).textTheme.bodyMedium?.color, size: 15),
                                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                             Text(store.avgRating!.toStringAsFixed(1), style: robotoRegular),
                                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),

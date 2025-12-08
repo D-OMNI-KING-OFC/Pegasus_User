@@ -69,7 +69,7 @@ class GuestCustomStepperWidget extends StatelessWidget {
           if(trailing != null) trailing!,
           if(trailing != null) const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          if(isActive) Icon(Icons.check_circle, color: Theme.of(context).primaryColor, size:  25),
+          if(isActive) Icon(Icons.check_circle, color: Theme.of(context).textTheme.bodyMedium?.color, size:  25),
         ]),
       ),
 

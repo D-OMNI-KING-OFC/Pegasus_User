@@ -126,7 +126,7 @@ class _WebItemThatYouLoveViewWidgetState extends State<WebItemThatYouLoveViewWid
                                                 Text(recommendItems[index].name!, style: robotoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
 
                                                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                                  Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                                  Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                                   Text(recommendItems[index].avgRating!.toStringAsFixed(1), style: robotoRegular),
                                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
@@ -323,7 +323,7 @@ class _WebItemThatYouLoveForShopState extends State<WebItemThatYouLoveForShop> {
                                               Text(recommendItems[index].name!, style: robotoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
 
                                               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                                Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                                Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                                 Text(recommendItems[index].avgRating!.toStringAsFixed(1), style: robotoRegular),
                                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
@@ -464,7 +464,7 @@ class WebItemThatYouLoveForShopShimmer extends StatelessWidget {
                                       ),
 
                                       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                                        Icon(Icons.star, size: 15, color: Theme.of(context).primaryColor),
+                                        Icon(Icons.star, size: 15, color: Theme.of(context).textTheme.bodyMedium?.color),
                                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                         Text('0.0', style: robotoRegular),
                                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),

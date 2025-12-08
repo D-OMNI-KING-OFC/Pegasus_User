@@ -132,7 +132,7 @@ class _PopularItemScreenState extends State<PopularItemScreen> {
                             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                             border: Border.all(color: Theme.of(context).primaryColor),
                           ),
-                          child: Icon(Icons.filter_list, color: Theme.of(context).primaryColor, size: 18),
+                          child: Icon(Icons.filter_list, color: Theme.of(context).textTheme.bodyMedium?.color, size: 18),
                         ),
                       ),
                     ]),

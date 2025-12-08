@@ -56,7 +56,7 @@ class CouponSection extends StatelessWidget {
                   child: Row(children: [
                     Text('add_voucher'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor)),
                     const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                    Icon(Icons.add, size: 20, color: Theme.of(context).primaryColor),
+                    Icon(Icons.add, size: 20, color: Theme.of(context).textTheme.bodyMedium?.color),
                   ]),
                 ),
               )

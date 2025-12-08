@@ -274,7 +274,7 @@ class _OfflinePaymentScreenState extends State<OfflinePaymentScreen> {
 
             selected ? Row(children: [
               Text('pay_on_this_account'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),),
-              Icon(Icons.check_circle_rounded, size: 20, color: Theme.of(context).primaryColor),
+              Icon(Icons.check_circle_rounded, size: 20, color: Theme.of(context).textTheme.bodyMedium?.color),
             ]) : const SizedBox(),
           ]),
           const SizedBox(height: Dimensions.paddingSizeSmall),

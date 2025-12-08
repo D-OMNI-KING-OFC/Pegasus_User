@@ -485,7 +485,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(Dimensions.radiusSmall), borderSide: BorderSide.none),
                                               filled: true, fillColor:Theme.of(context).cardColor,
                                               isDense: true,
-                                              prefixIcon: Icon(Icons.search, color: Theme.of(context).primaryColor.withValues(alpha: 0.50)),
+                                              prefixIcon: Icon(Icons.search, color: Theme.of(context).textTheme.bodyMedium?.color?.withValues(alpha: 0.50)),
                                             ),
                                             onSubmitted: (String? value) {
                                               if(value!.isNotEmpty) {
@@ -547,7 +547,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                         border: Border.all(color: Theme.of(context).primaryColor, width: 1),
                                       ),
                                       padding: const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-                                      child: Icon(Icons.filter_list, size: 24, color: Theme.of(context).primaryColor),
+                                      child: Icon(Icons.filter_list, size: 24, color: Theme.of(context).textTheme.bodyMedium?.color),
                                     ),
                                   ),
 
@@ -715,7 +715,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                 color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                               ),
                               padding: const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-                              child: Icon(Icons.search, size: 28, color: Theme.of(context).primaryColor),
+                              child: Icon(Icons.search, size: 28, color: Theme.of(context).textTheme.bodyMedium?.color),
                             ),
                           ) : const SizedBox(),
                           const SizedBox(width: Dimensions.paddingSizeSmall),
@@ -737,7 +737,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                 border: Border.all(color: Theme.of(context).primaryColor, width: 1),
                               ),
                               padding: const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-                              child: Icon(Icons.filter_list, size: 24, color: Theme.of(context).primaryColor),
+                              child: Icon(Icons.filter_list, size: 24, color: Theme.of(context).textTheme.bodyMedium?.color),
                             ),
                           ),
 

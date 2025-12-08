@@ -230,7 +230,7 @@ class _ItemViewAllScreenState extends State<ItemViewAllScreen> {
                         borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                         border: Border.all(color: Theme.of(context).primaryColor),
                       ),
-                      child: Icon(Icons.filter_list, color: Theme.of(context).primaryColor, size: 18),
+                      child: Icon(Icons.filter_list, color: Theme.of(context).textTheme.bodyMedium?.color, size: 18),
                     ),
                   ),
         
@@ -372,7 +372,7 @@ class ItemCardWidget extends StatelessWidget {
                 const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                 item.ratingCount! > 0 ? Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                  Icon(Icons.star_rounded, size: 14, color: Theme.of(context).primaryColor),
+                  Icon(Icons.star_rounded, size: 14, color: Theme.of(context).textTheme.bodyMedium?.color),
                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                   Text(item.avgRating!.toStringAsFixed(1), style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
