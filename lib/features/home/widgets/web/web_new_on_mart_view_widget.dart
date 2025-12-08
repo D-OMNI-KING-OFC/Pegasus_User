@@ -214,7 +214,7 @@ class _WebNewOnMartViewWidgetState extends State<WebNewOnMartViewWidget> {
                                             ),
                                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                            Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor)),
+                                            Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                                           ]),
                                         ),
                                       ]),

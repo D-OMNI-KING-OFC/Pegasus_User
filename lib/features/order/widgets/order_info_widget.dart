@@ -757,7 +757,7 @@ Widget offlineView(BuildContext context, OrderController orderController, Expans
           const Divider(),
 
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Text('seller_payment_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+            Text('seller_payment_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
             const SizedBox(),
           ]),
           const SizedBox(height: Dimensions.paddingSizeDefault),
@@ -779,13 +779,13 @@ Widget offlineView(BuildContext context, OrderController orderController, Expans
           const Divider(),
 
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Text('my_payment_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+            Text('my_payment_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
 
             (ongoing && orderController.trackModel!.offlinePayment != null && orderController.trackModel!.offlinePayment!.data!.status != 'verified') ? InkWell(
               onTap: (){
                 Get.dialog(OfflineInfoEditDialogWidget(offlinePayment: orderController.trackModel!.offlinePayment!, orderId: orderController.trackModel!.id!), barrierDismissible: true);
               },
-              child: Text('edit_details'.tr, style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
+              child: Text('edit_details'.tr, style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
             ) : const SizedBox(),
           ]),
           const SizedBox(height: Dimensions.paddingSizeDefault),

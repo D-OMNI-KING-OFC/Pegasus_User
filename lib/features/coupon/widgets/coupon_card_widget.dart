@@ -118,7 +118,7 @@ class CouponCardWidget extends StatelessWidget {
           triggerMode: TooltipTriggerMode.manual,
           content: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('code_copied'.tr,style: robotoRegular.copyWith(color: Theme.of(context).primaryColor)),
+            child: Text('code_copied'.tr,style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
           ),
           child: InkWell(
             onTap: () async {

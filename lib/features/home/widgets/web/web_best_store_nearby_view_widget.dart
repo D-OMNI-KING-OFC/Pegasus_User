@@ -252,10 +252,10 @@ class _WebBestStoreNearbyViewWidgetState extends State<WebBestStoreNearbyViewWid
                                                         Image.asset(Images.distanceLine, height: 15, width: 15),
                                                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                                        Text('${distance > 10 ? '10+' : distance.toStringAsFixed(1)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeExtraSmall)),
+                                                        Text('${distance > 10 ? '10+' : distance.toStringAsFixed(1)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeExtraSmall)),
                                                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                                        Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeExtraSmall)),
+                                                        Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeExtraSmall)),
                                                       ]),
                                                     ),
 

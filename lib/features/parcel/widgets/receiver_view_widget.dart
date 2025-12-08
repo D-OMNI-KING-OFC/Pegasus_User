@@ -123,7 +123,7 @@ class _ReceiverViewWidgetState extends State<ReceiverViewWidget> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radiusSmall), border: Border.all(color: Theme.of(context).primaryColor, width: 1)),
-                      child: Center(child: Text('set_from_saved_address'.tr, style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge))),
+                      child: Center(child: Text('set_from_saved_address'.tr, style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge))),
                     ),
                   )
               ),

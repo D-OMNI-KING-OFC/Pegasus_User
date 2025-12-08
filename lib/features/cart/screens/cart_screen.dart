@@ -211,7 +211,7 @@ class _CartScreenState extends State<CartScreen> {
                                             );
                                           },
                                           icon: Icon(Icons.add_circle_outline_sharp, color: Theme.of(context).textTheme.bodyMedium?.color),
-                                          label: Text('add_more_items'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault)),
+                                          label: Text('add_more_items'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeDefault)),
                                         ),
                                       ),
 
@@ -356,7 +356,7 @@ class _CartScreenState extends State<CartScreen> {
 
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text('add_cutlery'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                    Text('add_cutlery'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                     Text('do_not_have_cutlery'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
@@ -407,7 +407,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
 
                   cartController.notAvailableIndex != -1 ? Row(children: [
-                    Text(cartController.notAvailableList[cartController.notAvailableIndex].tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor)),
+                    Text(cartController.notAvailableList[cartController.notAvailableIndex].tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color)),
 
                     IconButton(
                       onPressed: ()=> cartController.setAvailableIndex(-1),
@@ -605,7 +605,7 @@ class CheckoutButton extends StatelessWidget {
 
                   Expanded(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text('add_cutlery'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                      Text('add_cutlery'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                       Text('do_not_have_cutlery'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),

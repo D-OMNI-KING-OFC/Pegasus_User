@@ -128,7 +128,7 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-                        child: Text('sign_in'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                        child: Text('sign_in'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                       ),
                     ),
                   ]),

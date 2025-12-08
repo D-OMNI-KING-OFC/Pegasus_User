@@ -256,10 +256,10 @@ class BestStoreNearbyView extends StatelessWidget {
                                           ),
                                           child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
 
-                                            Text('${distance > 10 ? '10+' : distance.toStringAsFixed(1)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeOverSmall)),
+                                            Text('${distance > 10 ? '10+' : distance.toStringAsFixed(1)} ${'km'.tr}', style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeOverSmall)),
                                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                            Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeOverSmall)),
+                                            Text('from_you'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeOverSmall)),
                                           ]),
                                         ),
                                       ),

@@ -111,7 +111,7 @@ class _DeliveryManTipsSectionState extends State<DeliveryManTipsSection> {
                     value: checkoutController.isDmTipSave,
                     onChanged: (bool? isChecked) => checkoutController.toggleDmTipSave(),
                   ),
-                  title: Text('save_for_later'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                  title: Text('save_for_later'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                   contentPadding: EdgeInsets.zero,
                   visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
                   dense: true,

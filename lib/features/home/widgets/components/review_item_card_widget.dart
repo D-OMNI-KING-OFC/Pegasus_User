@@ -277,7 +277,7 @@ class ReviewItemCard extends StatelessWidget {
                                     color: Theme.of(context).cardColor,
                                     boxShadow: [BoxShadow(color: Theme.of(context).primaryColor.withValues(alpha: 0.1), spreadRadius: 1, blurRadius: 5, offset: const Offset(0, 1))],
                                   ),
-                                  child: Text("add".tr, style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
+                                  child: Text("add".tr, style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                                 ),
                               ),
                             ),

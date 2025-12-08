@@ -45,7 +45,7 @@ class _CancellationDialogueWidgetState extends State<CancellationDialogueWidget>
                 boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5, spreadRadius: 1)],
               ),
               child: Column(children: [
-                Text('select_cancellation_reasons'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                Text('select_cancellation_reasons'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge)),
                 const SizedBox(height: Dimensions.paddingSizeExtraSmall),
               ]),
             ),

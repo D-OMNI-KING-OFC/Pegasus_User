@@ -183,7 +183,7 @@ class AddressBottomSheetWidget extends StatelessWidget {
                       Get.toNamed(RouteHelper.getAddAddressRoute(false, false, 0));
                     },
                     icon: const Icon(Icons.add_circle_outline_sharp),
-                    label: Text('add_new_address'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                    label: Text('add_new_address'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                   ) : const SizedBox(),
 
                 ]),

@@ -124,7 +124,7 @@ class GuestDeliveryAddress extends StatelessWidget {
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
               Image.asset(Images.guestLocationIcon, height: 15, color: Theme.of(context).primaryColor),
-              Text(' ${checkoutController.guestAddress!.addressType!.tr}:', style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+              Text(' ${checkoutController.guestAddress!.addressType!.tr}:', style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
               const SizedBox(width: Dimensions.paddingSizeSmall),
 
               Flexible(child: Text(

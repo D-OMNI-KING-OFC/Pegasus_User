@@ -194,7 +194,7 @@ class _ParcelRequestScreenState extends State<ParcelRequestScreen> {
                           const SizedBox(width: Dimensions.paddingSizeSmall),
 
                           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                            Text(widget.parcelCategory.name!, style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
+                            Text(widget.parcelCategory.name!, style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                             Text(
@@ -368,7 +368,7 @@ class _ParcelRequestScreenState extends State<ParcelRequestScreen> {
                             value: parcelController.isDmTipSave,
                             onChanged: (bool? isChecked) => parcelController.toggleDmTipSave(),
                           ),
-                          title: Text('save_for_later'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+                          title: Text('save_for_later'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                           contentPadding: EdgeInsets.zero,
                           visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
                           dense: true,

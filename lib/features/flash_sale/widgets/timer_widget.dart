@@ -23,7 +23,7 @@ class TimerWidget extends StatelessWidget {
           child: Text(timeCount > 9 ? timeCount.toString() : '0${timeCount.toString()}' , style: robotoBold.copyWith(color: Colors.white)),
         ),
         const SizedBox(height: Dimensions.paddingSizeSmall),
-        Text(timeUnit, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor, fontWeight: FontWeight.w500)),
+        Text(timeUnit, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color, fontWeight: FontWeight.w500)),
       ],
     );
   }

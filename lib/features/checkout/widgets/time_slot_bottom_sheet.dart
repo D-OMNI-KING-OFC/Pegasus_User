@@ -175,7 +175,7 @@ class _TimeSlotBottomSheetState extends State<TimeSlotBottomSheet> {
       onTap: onTap,
       child: Column(
         children: [
-          Text(title, style: isSelected ? robotoBold.copyWith(color: Theme.of(context).primaryColor) : robotoMedium),
+          Text(title, style: isSelected ? robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color) : robotoMedium),
           ResponsiveHelper.isDesktop(context) ? const SizedBox(height: Dimensions.paddingSizeSmall) : const SizedBox(),
           Divider(color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).disabledColor, thickness: isSelected ? 2 : 1),
         ],

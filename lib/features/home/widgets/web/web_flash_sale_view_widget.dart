@@ -114,7 +114,7 @@ class _WebFlashSaleViewWidgetState extends State<WebFlashSaleViewWidget> {
 
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text('${'available'.tr} : ', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
-            Text('$remaining ${'item'.tr}', style: robotoRegular.copyWith(color: Theme.of(context).primaryColor)),
+            Text('$remaining ${'item'.tr}', style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
           ]),
           const SizedBox(height: Dimensions.paddingSizeDefault),
         ]),

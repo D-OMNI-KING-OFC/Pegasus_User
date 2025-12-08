@@ -70,7 +70,7 @@ class _ReferAndEarnScreenState extends State<ReferAndEarnScreen> {
                           ),
                           const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 
-                          ResponsiveHelper.isDesktop(context) ? const SizedBox() : Text('earn_money_on_every_referral'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                          ResponsiveHelper.isDesktop(context) ? const SizedBox() : Text('earn_money_on_every_referral'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeSmall)),
                           ResponsiveHelper.isDesktop(context) ? const SizedBox() : const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                           ResponsiveHelper.isDesktop(context) ? const SizedBox() : Row(mainAxisAlignment: MainAxisAlignment.center, children: [

@@ -120,7 +120,7 @@ class _WebCouponBannerViewWidgetState extends State<WebCouponBannerViewWidget> {
                           Icon(Icons.copy, color: Theme.of(context).textTheme.bodyMedium?.color, size: 16),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                          Text(couponController.couponList![itemIndex].code ?? '', style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall)),
+                          Text(couponController.couponList![itemIndex].code ?? '', style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeSmall)),
                         ]),
                       ),
                     ),

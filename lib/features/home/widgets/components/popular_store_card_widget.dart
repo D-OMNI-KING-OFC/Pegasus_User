@@ -96,7 +96,7 @@ class PopularStoreCard extends StatelessWidget {
                                           ],
                                         ),
                                         const SizedBox(width: Dimensions.paddingSizeDefault),
-                                        Text('${store.itemCount}' ' ' 'items'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor)),
+                                        Text('${store.itemCount}' ' ' 'items'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                                       ],
                                     ),
                                   ],

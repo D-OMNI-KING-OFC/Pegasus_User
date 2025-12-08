@@ -269,11 +269,11 @@ class _OfflinePaymentScreenState extends State<OfflinePaymentScreen> {
       child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
           Row(children: [
-            Text('bank_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor)),
+            Text('bank_info'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
             const Spacer(),
 
             selected ? Row(children: [
-              Text('pay_on_this_account'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),),
+              Text('pay_on_this_account'.tr, style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),),
               Icon(Icons.check_circle_rounded, size: 20, color: Theme.of(context).textTheme.bodyMedium?.color),
             ]) : const SizedBox(),
           ]),

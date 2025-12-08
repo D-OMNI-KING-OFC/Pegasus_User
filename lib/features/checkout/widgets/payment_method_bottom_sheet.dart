@@ -126,7 +126,7 @@ class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
                     Text('total_bill'.tr, style: robotoMedium.copyWith(fontSize: 14, color: Colors.grey.shade700)),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                    Text(PriceConverter.convertPrice(widget.totalPrice), style: robotoMedium.copyWith(fontSize: 20, color: Theme.of(context).primaryColor)),
+                    Text(PriceConverter.convertPrice(widget.totalPrice), style: robotoMedium.copyWith(fontSize: 20, color: Theme.of(context).textTheme.bodyMedium?.color)),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
 
                     walletView(checkoutController),
@@ -359,7 +359,7 @@ class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
             child: isWalletSelected ? const Icon(Icons.clear, color: Colors.red) : Container(
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Theme.of(context).primaryColor, width: 1)),
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 20),
-              child: Text('apply'.tr, style: robotoMedium.copyWith(fontSize: 12, color: Theme.of(context).primaryColor)),
+              child: Text('apply'.tr, style: robotoMedium.copyWith(fontSize: 12, color: Theme.of(context).textTheme.bodyMedium?.color)),
             ),
           ),
         ]),

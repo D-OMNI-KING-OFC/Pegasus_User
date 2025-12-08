@@ -284,7 +284,7 @@ class _WebTopOffersNearMeState extends State<WebTopOffersNearMe> {
                                   ),
                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                                  Text('from_you'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor)),
+                                  Text('from_you'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color)),
                                 ]),
                               ),
 
