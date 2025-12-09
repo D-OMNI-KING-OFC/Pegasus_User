@@ -67,11 +67,25 @@ class AuthService implements AuthServiceInterface{
   @override
   Future<ResponseModel> loginWithSocialMedia(SocialLogInBody socialLogInModel, {bool isCustomerVerificationOn = false}) async {
     Response response = await authRepositoryInterface.loginWithSocialMedia(socialLogInModel);
+    
+    debugPrint('=== SOCIAL LOGIN API RESPONSE ===');
+    debugPrint('Status Code: ${response.statusCode}');
+    debugPrint('Status Text: ${response.statusText}');
+    debugPrint('Response Body: ${response.body}');
+    debugPrint('Response Headers: ${response.headers}');
+    
     if (response.statusCode == 200) {
-      AuthResponseModel authResponse = AuthResponseModel.fromJson(response.body);
-      await _updateHeaderFunctionality(authResponse);
-      return ResponseModel(true, authResponse.token??'', authResponseModel: authResponse);
+      try {
+        AuthResponseModel authResponse = AuthResponseModel.fromJson(response.body);
+        debugPrint('Auth Response Model - Token: ${authResponse.token}, User ID: ${authResponse.id}');
+        await _updateHeaderFunctionality(authResponse);
+        return ResponseModel(true, authResponse.token??'', authResponseModel: authResponse);
+      } catch(e) {
+        debugPrint('Error parsing AuthResponseModel: $e');
+        return ResponseModel(false, 'Error parsing response: $e');
+      }
     } else {
+      debugPrint('Social login failed with status code: ${response.statusCode}');
       return ResponseModel(false, response.statusText);
     }
   }

@@ -269,11 +269,15 @@ class SocialLoginWidget extends StatelessWidget {
             );
 
             debugPrint('Sending to API - Email: ${googleBodyModel.email}, Token: ${googleBodyModel.token}, UniqueId: ${googleBodyModel.uniqueId}');
+            debugPrint('SocialLogInBody JSON: ${googleBodyModel.toJson()}');
 
             Get.find<AuthController>().loginWithSocialMedia(googleBodyModel).then((response) {
-              debugPrint('Google Login Response Success: ${response.isSuccess}');
-              debugPrint('Google Login Message: ${response.message}');
-              debugPrint('Google Login Status Code: ${response.authResponseModel?.toString()}');
+              debugPrint('=== GOOGLE LOGIN RESPONSE ===');
+              debugPrint('Response isSuccess: ${response.isSuccess}');
+              debugPrint('Response Message: ${response.message}');
+              debugPrint('Response Token: ${response.message}');
+              debugPrint('AuthResponseModel: ${response.authResponseModel?.toString()}');
+              
               if (response.isSuccess) {
                 debugPrint('Processing successful setup');
                 _processSocialSuccessSetup(response, googleBodyModel, null, null);
