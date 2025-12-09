@@ -261,7 +261,6 @@ class SocialLoginWidget extends StatelessWidget {
             GoogleSignInClientAuthorization? auth = await googleAccount.authorizationClient.authorizationForScopes(scopes);
 
             debugPrint('Access Token: ${auth?.accessToken}');
-            debugPrint('ID Token: ${auth?.idToken}');
 
             SocialLogInBody googleBodyModel = SocialLogInBody(
               email: googleAccount.email, token: auth?.accessToken, uniqueId: googleAccount.id,

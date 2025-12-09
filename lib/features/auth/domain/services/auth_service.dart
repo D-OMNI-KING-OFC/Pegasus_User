@@ -1,3 +1,4 @@
+import 'dart:developer' as developer;
 import 'package:get/get.dart';
 import 'package:sixam_mart/common/models/response_model.dart';
 import 'package:sixam_mart/features/auth/domain/models/auth_response_model.dart';
@@ -68,24 +69,24 @@ class AuthService implements AuthServiceInterface{
   Future<ResponseModel> loginWithSocialMedia(SocialLogInBody socialLogInModel, {bool isCustomerVerificationOn = false}) async {
     Response response = await authRepositoryInterface.loginWithSocialMedia(socialLogInModel);
     
-    debugPrint('=== SOCIAL LOGIN API RESPONSE ===');
-    debugPrint('Status Code: ${response.statusCode}');
-    debugPrint('Status Text: ${response.statusText}');
-    debugPrint('Response Body: ${response.body}');
-    debugPrint('Response Headers: ${response.headers}');
+    developer.log('=== SOCIAL LOGIN API RESPONSE ===');
+    developer.log('Status Code: ${response.statusCode}');
+    developer.log('Status Text: ${response.statusText}');
+    developer.log('Response Body: ${response.body}');
+    developer.log('Response Headers: ${response.headers}');
     
     if (response.statusCode == 200) {
       try {
         AuthResponseModel authResponse = AuthResponseModel.fromJson(response.body);
-        debugPrint('Auth Response Model - Token: ${authResponse.token}, User ID: ${authResponse.id}');
+        developer.log('Auth Response Model - Token: ${authResponse.token}, Email: ${authResponse.email}');
         await _updateHeaderFunctionality(authResponse);
         return ResponseModel(true, authResponse.token??'', authResponseModel: authResponse);
       } catch(e) {
-        debugPrint('Error parsing AuthResponseModel: $e');
+        developer.log('Error parsing AuthResponseModel: $e');
         return ResponseModel(false, 'Error parsing response: $e');
       }
     } else {
-      debugPrint('Social login failed with status code: ${response.statusCode}');
+      developer.log('Social login failed with status code: ${response.statusCode}');
       return ResponseModel(false, response.statusText);
     }
   }
