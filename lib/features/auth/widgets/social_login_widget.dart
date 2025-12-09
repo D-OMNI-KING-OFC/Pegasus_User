@@ -246,19 +246,39 @@ class SocialLoginWidget extends StatelessWidget {
           await googleSignIn.initialize(serverClientId: AppConstants.googleServerClientId).then((_) async {
 
             googleSignIn.signOut();
-            GoogleSignInAccount googleAccount = await googleSignIn.authenticate();
+            GoogleSignInAccount? googleAccount = await googleSignIn.authenticate();
+            
+            if(googleAccount == null) {
+              debugPrint('Error: Google account is null');
+              showCustomSnackBar('Google sign-in failed');
+              return;
+            }
+            
+            debugPrint('Google Account Email: ${googleAccount.email}');
+            debugPrint('Google Account ID: ${googleAccount.id}');
+            
             const List<String> scopes = <String>['email'];
             GoogleSignInClientAuthorization? auth = await googleAccount.authorizationClient.authorizationForScopes(scopes);
+
+            debugPrint('Access Token: ${auth?.accessToken}');
+            debugPrint('ID Token: ${auth?.idToken}');
 
             SocialLogInBody googleBodyModel = SocialLogInBody(
               email: googleAccount.email, token: auth?.accessToken, uniqueId: googleAccount.id,
               medium: 'google', accessToken: 1, loginType: CentralizeLoginType.social.name,
             );
 
+            debugPrint('Sending to API - Email: ${googleBodyModel.email}, Token: ${googleBodyModel.token}, UniqueId: ${googleBodyModel.uniqueId}');
+
             Get.find<AuthController>().loginWithSocialMedia(googleBodyModel).then((response) {
+              debugPrint('Google Login Response Success: ${response.isSuccess}');
+              debugPrint('Google Login Message: ${response.message}');
+              debugPrint('Google Login Status Code: ${response.authResponseModel?.toString()}');
               if (response.isSuccess) {
+                debugPrint('Processing successful setup');
                 _processSocialSuccessSetup(response, googleBodyModel, null, null);
               } else {
+                debugPrint('Login failed, showing error: ${response.message}');
                 showCustomSnackBar(response.message);
               }
             });
@@ -268,6 +288,8 @@ class SocialLoginWidget extends StatelessWidget {
         }
       }catch(e){
         debugPrint('Error in google sign in: $e');
+        debugPrint('Stack trace: ${StackTrace.current}');
+        showCustomSnackBar('Error: ${e.toString()}');
       }
     }
   }

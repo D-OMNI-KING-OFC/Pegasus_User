@@ -101,7 +101,7 @@ class AuthRepository implements AuthRepositoryInterface{
     if(guestId.isNotEmpty) {
       data.addAll({"guest_id": guestId});
     }
-    return await apiClient.postData(AppConstants.loginUri, data);
+    return await apiClient.postData(AppConstants.socialLoginUri, data);
   }
 
   @override
