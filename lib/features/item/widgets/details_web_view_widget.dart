@@ -141,7 +141,7 @@ class DetailsWebViewWidget extends StatelessWidget {
                               onTap: () => itemController.changeReadMore(),
                               child: Text(
                                 itemController.isReadMore ? "read_less".tr : "read_more".tr,
-                                style: robotoRegular.copyWith(color: Theme.of(context).primaryColor),
+                                style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),
                               ),
                             ) : const SizedBox(),
 

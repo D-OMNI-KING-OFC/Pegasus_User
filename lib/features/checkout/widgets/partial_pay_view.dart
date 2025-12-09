@@ -46,17 +46,17 @@ class PartialPayView extends StatelessWidget {
 
                   Text(
                     'applied'.tr,
-                    style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault),
+                    style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeDefault),
                   )
                 ]) : Text(
                   'do_you_want_to_use_now'.tr,
-                  style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault),
+                  style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeDefault),
                 ),
                 const SizedBox(height: Dimensions.paddingSizeSmall),
 
                 Text(
                   PriceConverter.convertPrice(Get.find<ProfileController>().userInfoModel!.walletBalance!),
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                 ),
 
                 checkoutController.paymentMethodIndex == 1 ? Text(
@@ -103,7 +103,7 @@ class PartialPayView extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(
                   PriceConverter.convertPrice(Get.find<ProfileController>().userInfoModel!.walletBalance!),
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).primaryColor),
+                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                 ),
                 const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
@@ -128,11 +128,11 @@ class PartialPayView extends StatelessWidget {
 
                 Text(
                   'applied'.tr,
-                  style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge),
+                  style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge),
                 )
               ]) : Text(
                 'do_you_want_to_use_now'.tr,
-                style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge),
+                style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge),
               ),
 
               InkWell(

@@ -263,7 +263,7 @@ class ItemTitleViewWidget extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(0, 5, 5, 5),
                 child: Text(
                   item!.storeName!,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                 ),
               ),
             ),
@@ -274,7 +274,7 @@ class ItemTitleViewWidget extends StatelessWidget {
                 Text(
                   '${PriceConverter.convertPrice(startingPrice, discount: discount, discountType: discountType)}'
                       '${endingPrice!= null ? ' - ${PriceConverter.convertPrice(endingPrice, discount: discount, discountType: discountType)}' : ''}',
-                  style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge), textDirection: TextDirection.ltr,
+                  style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge), textDirection: TextDirection.ltr,
                 ),
                 const SizedBox(height: 5),
 
@@ -309,7 +309,7 @@ class ItemTitleViewWidget extends StatelessWidget {
                   child: Text(
                     Get.find<SplashController>().configModel!.moduleConfig!.module!.unit! ? item!.unitType ?? ''
                         : item!.veg == 0 ? 'non_veg'.tr : 'veg'.tr,
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                   ),
                 ) : const SizedBox(),
                 const SizedBox(height: Dimensions.paddingSizeDefault),

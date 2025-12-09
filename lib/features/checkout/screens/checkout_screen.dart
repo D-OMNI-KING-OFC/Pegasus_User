@@ -422,7 +422,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
                       child: Row(children: [
                         Text(
                           checkoutController.isPartialPay ? 'due_payment'.tr : 'total_amount'.tr,
-                          style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                          style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                         ),
 
                         (checkoutController.taxIncluded == 1) ? Text(' ${'vat_tax_inc'.tr}', style: robotoMedium.copyWith(
@@ -433,7 +433,7 @@ class CheckoutScreenState extends State<CheckoutScreen> {
 
                         PriceConverter.convertAnimationPrice(
                           checkoutController.viewTotalPrice,
-                          textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                          textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                         ),
                       ]),
                     ),

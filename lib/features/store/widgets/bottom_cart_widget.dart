@@ -28,12 +28,12 @@ class BottomCartWidget extends StatelessWidget {
               Row(children: [
                 Text(
                   '${'total'.tr}: ',
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                 ),
 
                 Text(
                   PriceConverter.convertPrice(cartController.calculationCart()),
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor), textDirection: TextDirection.ltr,
+                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color), textDirection: TextDirection.ltr,
                 ),
               ]),
             ]),

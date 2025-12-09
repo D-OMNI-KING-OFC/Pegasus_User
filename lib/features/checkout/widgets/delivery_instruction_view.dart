@@ -68,7 +68,7 @@ class _DeliveryInstructionViewState extends State<DeliveryInstructionView> {
                           Expanded(
                             child: Text(
                               AppConstants.deliveryInstructionList[index].tr,
-                              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).disabledColor),
+                              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelected ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).disabledColor),
                             ),
                           ),
                         ]),
@@ -85,7 +85,7 @@ class _DeliveryInstructionViewState extends State<DeliveryInstructionView> {
               child: Row(children: [
                 Text(
                   AppConstants.deliveryInstructionList[orderController.selectedInstruction].tr,
-                  style: robotoRegular.copyWith(color: Theme.of(context).primaryColor),
+                  style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),
                 ),
 
                 InkWell(

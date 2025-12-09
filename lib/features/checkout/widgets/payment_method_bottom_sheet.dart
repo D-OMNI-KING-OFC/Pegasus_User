@@ -332,7 +332,7 @@ class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
 
               Text(
                 isWalletSelected ? ' (${'applied'.tr})' : '',
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyMedium?.color),
               ),
             ])
           ]),

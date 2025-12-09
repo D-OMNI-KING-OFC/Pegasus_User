@@ -245,7 +245,7 @@ class _WebTopOffersNearMeState extends State<WebTopOffersNearMe> {
 
                                   Expanded(
                                     child: Text(store.address ?? '',
-                                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                                       maxLines: 1, overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
@@ -280,7 +280,7 @@ class _WebTopOffersNearMeState extends State<WebTopOffersNearMe> {
 
                                   Text(
                                     '${distance > 100 ? '100+' : distance.toStringAsFixed(2)} ${'km'.tr}',
-                                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                                   ),
                                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 

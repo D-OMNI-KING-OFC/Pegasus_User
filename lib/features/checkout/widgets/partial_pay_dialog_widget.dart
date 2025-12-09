@@ -50,7 +50,7 @@ class PartialPayDialogWidget extends StatelessWidget {
 
           Text(
             isPartialPay ? 'want_to_pay_partially_with_wallet'.tr : 'want_to_pay_via_wallet'.tr,
-            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor), textAlign: TextAlign.center,
+            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color), textAlign: TextAlign.center,
           ),
           const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -59,7 +59,7 @@ class PartialPayDialogWidget extends StatelessWidget {
 
           Text(
             PriceConverter.convertPrice(Get.find<ProfileController>().userInfoModel!.walletBalance!),
-            style: robotoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).primaryColor),
+            style: robotoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
           ),
 
           Padding(

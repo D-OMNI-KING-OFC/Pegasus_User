@@ -64,7 +64,7 @@ class FeaturedCategoriesView extends StatelessWidget {
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                                child: Text('${categoryList[index].name}', style: robotoMedium.copyWith(color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).disabledColor)),
+                                child: Text('${categoryList[index].name}', style: robotoMedium.copyWith(color: isSelected ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).disabledColor)),
                               ),
                             ),
 

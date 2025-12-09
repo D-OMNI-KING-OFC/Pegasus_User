@@ -136,7 +136,7 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
 
                 AuthHelper.isGuestLoggedIn() ? SelectableText(
                   '${'order_id'.tr}: $orderId',
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
                 ) : const SizedBox(),
 
                 Padding(

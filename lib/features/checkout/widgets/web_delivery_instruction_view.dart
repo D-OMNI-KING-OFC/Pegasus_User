@@ -76,7 +76,7 @@ class _WebDeliveryInstructionViewState extends State<WebDeliveryInstructionView>
                             Expanded(
                               child: Text(
                                 AppConstants.deliveryInstructionList[index].tr,
-                                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).disabledColor),
+                                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelected ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).disabledColor),
                               ),
                             ),
                           ],

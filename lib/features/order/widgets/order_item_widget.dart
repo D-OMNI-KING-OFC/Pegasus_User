@@ -73,7 +73,7 @@ class OrderItemWidget extends StatelessWidget {
                 Text('${'quantity'.tr}: ', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                 Text(
                   orderDetails.quantity.toString(),
-                  style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeSmall),
+                  style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeSmall),
                 ),
               ]),
               const SizedBox(height: Dimensions.paddingSizeExtraSmall),
@@ -96,7 +96,7 @@ class OrderItemWidget extends StatelessWidget {
                   ),
                   child: Text(
                     orderDetails.itemDetails!.unitType ?? '',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                   ),
                 ) : const SizedBox(),
 

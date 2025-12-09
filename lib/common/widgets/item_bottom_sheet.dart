@@ -393,7 +393,7 @@ class _ItemBottomSheetState extends State<ItemBottomSheet> {
                             ),
                             child: Column(children: [
                               Text('not_available_now'.tr, style: robotoMedium.copyWith(
-                                color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge,
+                                color: Theme.of(context).textTheme.bodyMedium?.color, fontSize: Dimensions.fontSizeLarge,
                               )),
                               Text(
                                 '${'available_will_be'.tr} ${DateConverter.convertTimeToTime(item.availableTimeStarts!)} '

@@ -136,7 +136,7 @@ class OrderScreenState extends State<OrderScreen> with TickerProviderStateMixin 
                                   labelColor: Theme.of(context).primaryColor,
                                   unselectedLabelColor: Theme.of(context).disabledColor,
                                   unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
-                                  labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+                                  labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                                   tabs: [
                                     Tab(text: 'running'.tr),
                                     Tab(text: 'history'.tr),

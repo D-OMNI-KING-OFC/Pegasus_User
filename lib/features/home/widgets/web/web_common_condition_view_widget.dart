@@ -92,7 +92,7 @@ class _WebCommonConditionViewWidgetState extends State<WebCommonConditionViewWid
                             padding: const EdgeInsets.only(right: Dimensions.paddingSizeDefault),
                             child: Text(
                               '${itemController.commonConditions![index].name}',
-                              style: robotoMedium.copyWith(color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).disabledColor),
+                              style: robotoMedium.copyWith(color: isSelected ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).disabledColor),
                             ),
                           ),
                         );

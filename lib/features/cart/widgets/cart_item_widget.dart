@@ -150,7 +150,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                           ),
                           child: Text(
                             widget.cart.item!.unitType ?? '',
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                           ),
                         ) : const SizedBox(),
 

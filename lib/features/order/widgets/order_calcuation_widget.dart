@@ -240,7 +240,7 @@ class OrderCalculationWidget extends StatelessWidget {
                       )),
                       Text(
                         PriceConverter.convertPrice(total), textDirection: TextDirection.ltr,
-                        style: robotoMedium.copyWith(fontSize: isDesktop ? Dimensions.fontSizeSmall : Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                        style: robotoMedium.copyWith(fontSize: isDesktop ? Dimensions.fontSizeSmall : Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyMedium?.color),
                       ),
                     ]),
                     const SizedBox(height: 10),

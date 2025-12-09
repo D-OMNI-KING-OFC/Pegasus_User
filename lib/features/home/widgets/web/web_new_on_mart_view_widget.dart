@@ -180,7 +180,7 @@ class _WebNewOnMartViewWidgetState extends State<WebNewOnMartViewWidget> {
 
                                                 Expanded(
                                                   child: Text(storeList[index].address ?? '',
-                                                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+                                                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color),
                                                     maxLines: 1, overflow: TextOverflow.ellipsis,
                                                   ),
                                                 ),
@@ -210,7 +210,7 @@ class _WebNewOnMartViewWidgetState extends State<WebNewOnMartViewWidget> {
 
                                             Text(
                                               '${distance > 100 ? '100+' : distance.toStringAsFixed(2)} ${'km'.tr}',
-                                              style: robotoBold.copyWith(color: Theme.of(context).primaryColor),
+                                              style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),
                                             ),
                                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 

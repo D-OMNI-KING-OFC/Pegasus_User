@@ -234,7 +234,7 @@ class _ParcelRequestScreenState extends State<ParcelRequestScreen> {
                           Text('delivery_fee'.tr, style: robotoRegular),
                           Text(
                             parcelController.distance == -1 ? 'calculating'.tr : PriceConverter.convertPrice(charge),
-                            style: robotoBold.copyWith(color: Theme.of(context).primaryColor), textDirection: TextDirection.ltr,
+                            style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color), textDirection: TextDirection.ltr,
                           ),
                         ]),
                       ]))
@@ -283,7 +283,7 @@ class _ParcelRequestScreenState extends State<ParcelRequestScreen> {
                                     Flexible(
                                       child: Text(
                                         parcelController.parcelInstructionList![parcelController.selectedIndexNote!].instruction ?? '',
-                                        style: robotoMedium.copyWith(color: Theme.of(context).primaryColor), maxLines: 1, overflow: TextOverflow.ellipsis,
+                                        style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color), maxLines: 1, overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
                                     const SizedBox(width: Dimensions.paddingSizeSmall),

@@ -68,7 +68,7 @@ class PaymentSection extends StatelessWidget {
 
           Text(
             PriceConverter.convertPrice(total), textDirection: TextDirection.ltr,
-            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
           )
 
         ]) : const SizedBox() : InkWell(
@@ -127,7 +127,7 @@ class PaymentSection extends StatelessWidget {
             ),
             checkoutController.paymentMethodIndex != -1 ? PriceConverter.convertAnimationPrice(
               checkoutController.viewTotalPrice,
-              textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+              textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyMedium?.color),
             ) : const SizedBox(),
             SizedBox(width: ResponsiveHelper.isDesktop(context) ? Dimensions.paddingSizeSmall : 0),
 

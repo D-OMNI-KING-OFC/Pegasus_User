@@ -122,7 +122,7 @@ class BottomSection extends StatelessWidget {
               ),
               PriceConverter.convertAnimationPrice(
                 checkoutController.viewTotalPrice,
-                textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: checkoutController.isPartialPay ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).primaryColor),
+                textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: checkoutController.isPartialPay ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).textTheme.bodyMedium?.color),
               ),
             ]) : const SizedBox(),
           ]),
@@ -168,7 +168,7 @@ class BottomSection extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 Text('coupon_discount'.tr, style: robotoRegular),
                 (couponController.coupon != null && couponController.coupon!.couponType == 'free_delivery') ? Text(
-                  'free_delivery'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor),
+                  'free_delivery'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),
                 ) : Text(
                   '(-) ${PriceConverter.convertPrice(couponController.discount)}',
                   style: robotoRegular, textDirection: TextDirection.ltr,
@@ -226,7 +226,7 @@ class BottomSection extends StatelessWidget {
               checkoutController.distance == -1 ? Text(
                 'calculating'.tr, style: robotoRegular.copyWith(color: Colors.red),
               ) : (deliveryCharge == 0 || (couponController.coupon != null && couponController.coupon!.couponType == 'free_delivery')) ? Text(
-                'free'.tr, style: robotoRegular.copyWith(color: Theme.of(context).primaryColor),
+                'free'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color),
               ) : Text(
                 '(+) ${PriceConverter.convertPrice(deliveryCharge)}', style: robotoRegular, textDirection: TextDirection.ltr,
               ),
@@ -254,11 +254,11 @@ class BottomSection extends StatelessWidget {
             checkoutController.isPartialPay ? Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Text(
                 'due_payment'.tr,
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: !ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).primaryColor),
+                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: !ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).textTheme.bodyMedium?.color),
               ),
               PriceConverter.convertAnimationPrice(
                 checkoutController.viewTotalPrice,
-                textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: !ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).primaryColor),
+                textStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: !ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyMedium!.color : Theme.of(context).textTheme.bodyMedium?.color),
               )
             ]) : const SizedBox(),
 

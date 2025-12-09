@@ -34,7 +34,7 @@ class BaseCardWidget extends StatelessWidget {
 
             Align(
               alignment: isDesktop ? Alignment.centerLeft : Alignment.center,
-              child: Text(title, style: robotoMedium.copyWith(color: storeRegistrationController.businessIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), fontSize: Dimensions.fontSizeDefault,
+              child: Text(title, style: robotoMedium.copyWith(color: storeRegistrationController.businessIndex == index ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), fontSize: Dimensions.fontSizeDefault,
                 fontWeight: storeRegistrationController.businessIndex == index ? FontWeight.w600 : isDesktop ? FontWeight.w600 : FontWeight.w400,
               )),
             ),

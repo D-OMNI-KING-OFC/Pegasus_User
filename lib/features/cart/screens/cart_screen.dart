@@ -568,7 +568,7 @@ class CheckoutButton extends StatelessWidget {
 
                     Text(
                       PriceConverter.convertPrice(Get.find<SplashController>().configModel!.adminFreeDelivery!.freeDeliveryOver! - cartController.subTotal),
-                      style: robotoMedium.copyWith(color: Theme.of(context).primaryColor), textDirection: TextDirection.ltr,
+                      style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color), textDirection: TextDirection.ltr,
                     ),
                     const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
@@ -590,8 +590,8 @@ class CheckoutButton extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('subtotal'.tr, style: robotoMedium.copyWith(color:  ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyLarge!.color : Theme.of(context).primaryColor)),
-                    PriceConverter.convertAnimationPrice(cartController.subTotal, textStyle: robotoRegular.copyWith(color: Theme.of(context).primaryColor)),
+                    Text('subtotal'.tr, style: robotoMedium.copyWith(color:  ResponsiveHelper.isDesktop(context) ? Theme.of(context).textTheme.bodyLarge!.color : Theme.of(context).textTheme.bodyMedium?.color)),
+                    PriceConverter.convertAnimationPrice(cartController.subTotal, textStyle: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color)),
                   ],
                 ),
               ),

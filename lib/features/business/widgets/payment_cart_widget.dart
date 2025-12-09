@@ -29,7 +29,7 @@ class PaymentCartWidget extends StatelessWidget {
             width: context.width,
             padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
             child: Row(children: [
-              Text(title, style: robotoBold.copyWith(color: businessController.paymentIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge!.color)),
+              Text(title, style: robotoBold.copyWith(color: businessController.paymentIndex == index ? Theme.of(context).textTheme.bodyMedium?.color : Theme.of(context).textTheme.bodyLarge!.color)),
               const Spacer(),
 
               (ResponsiveHelper.isDesktop(context) && businessController.paymentIndex == index) ? Container(

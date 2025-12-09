@@ -277,7 +277,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                                         Text(
                                           PriceConverter.convertPrice(store.minimumOrder), textDirection: TextDirection.ltr,
-                                          style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall - (scrollingRate * 2), color: Theme.of(context).primaryColor),
+                                          style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall - (scrollingRate * 2), color: Theme.of(context).textTheme.bodyMedium?.color),
                                         ),
                                       ]),
                                     ])),
@@ -438,7 +438,7 @@ class _StoreScreenState extends State<StoreScreen> {
                                                 storeController.categoryList![index].name!,
                                                 maxLines: 1, overflow: TextOverflow.ellipsis,
                                                 style: index == storeController.categoryIndex
-                                                    ? robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor)
+                                                    ? robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyMedium?.color)
                                                     : robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                                               ),
                                             ]),
@@ -837,7 +837,7 @@ class _StoreScreenState extends State<StoreScreen> {
                   child:  Center(
                     child: Text(
                       'prescription_order'.tr, textAlign: TextAlign.center,
-                      style: robotoMedium.copyWith(color: Theme.of(context).primaryColor), maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyMedium?.color), maxLines: 1, overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),
